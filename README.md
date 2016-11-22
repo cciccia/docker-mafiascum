@@ -107,16 +107,16 @@ docker build -t mafiascum:localdev .
 ```
 Afterwards, just rerun it like you did the first time.
 
-### Updating Shortcut
-Rebuilding the container each update is annoying and time consuming. Using these commands you can just copy in the updates without rebuilding.
-```bash
-docker exec mafiascum rm -rf /var/www/html/
-docker cp src/ mafiascum:/var/www/html/
-```
-
 ## Cleanup
-You can remove the containers by running:
+You can remove both the containers by running:
 ```bash
 docker rm -f mafiascum
 docker rm -f mariadb
+```
+
+## Starting After Reboot
+If you reboot your dev machine the docker containers **won't** come back up by default. Therefore, you'll need to start them like this:
+```bash
+docker start mariadb
+docker start mafiascum
 ```
