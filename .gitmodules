@@ -1,4 +1,4 @@
 [submodule "src"]
-	path = src
-	url = git@github.com:Thesp1/mafiascum.git
-	branch = master
+        path = src
+        url = git@github:cciccia/mafiascum.git
+        branch = master
